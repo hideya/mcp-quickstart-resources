@@ -19,13 +19,13 @@ async def handle_list_tools() -> list[types.Tool]:
     return [
         types.Tool(
             name="get-alerts",
-            description="Get weather alerts for a state",
+            description="Get weather alerts for a US state",
             inputSchema={
                 "type": "object",
                 "properties": {
                     "state": {
                         "type": "string",
-                        "description": "Two-letter state code (e.g. CA, NY)",
+                        "description": "Two-letter US state code (e.g. CA, NY)",
                     },
                 },
                 "required": ["state"],
@@ -33,7 +33,7 @@ async def handle_list_tools() -> list[types.Tool]:
         ),
         types.Tool(
             name="get-forecast",
-            description="Get weather forecast for a location",
+            description="Get weather forecast for a location in the US",
             inputSchema={
                 "type": "object",
                 "properties": {
